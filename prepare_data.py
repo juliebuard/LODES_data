@@ -1,9 +1,7 @@
 # load the data 
 import pandas as pd
 
-lodes_data = pd.read_csv('ca_od_main_JT00_2013.csv')
-data = pd.DataFrame(lodes_data, columns = ['w_geocode','h_geocode','S000','SA01','SA02','SA03','SE01','SE02','SE03','SI01','SI02','SI03','createdate'])
-
+data = pd.read_csv('ca_od_main_JT00_2013.csv',engine = {'c'}, names =['w_geocode','h_geocode','S000','SA01','SA02','SA03','SE01','SE02','SE03','SI01','SI02','SI03','createdate'] )
 
 # convert the geocodes into strings 
 for i in range(len(data)):
